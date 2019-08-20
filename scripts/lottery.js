@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   //p标签生成器
   function create_p(content) {
-    var newP = document.createElement('p');
+    var newP = document.createElement('span');
     newP.innerHTML = content;
     return newP;
   }
@@ -21,8 +21,8 @@ $(document).ready(function(){
       if(arr[i] == undefined) {
         continue;
       }
-      var index = i + 1;
-      var p = create_p("第" + index + "个：" + arr[i]);
+      
+      var p = create_p(arr[i] + " &nbsp;&nbsp; ");
       $(id).append(p);
     }
 
